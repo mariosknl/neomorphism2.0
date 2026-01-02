@@ -1,4 +1,4 @@
-import { mergeProps, useRender } from "@base-ui/react";
+import { mergeProps, useRender } from "@base-ui-components/react";
 import { cva } from "class-variance-authority";
 
 const inputVariants = cva(

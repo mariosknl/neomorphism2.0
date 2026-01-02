@@ -1,4 +1,4 @@
-import { Checkbox, mergeProps } from "@base-ui/react";
+import { Checkbox, mergeProps } from "@base-ui-components/react";
 import { cva } from "class-variance-authority";
 import { Check } from "lucide-react";
 
