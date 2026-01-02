@@ -1,9 +1,10 @@
 import Button from "./components/Button";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <main>
-      <h1>hello world</h1>
+      <Nav />
       <div className="space-x-2">
         <Button>Cancel</Button>
         <Button variant="primary">Click me</Button>
