@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "./components/Card";
 import NeuCheckbox from "./components/Checkbox";
+import Input from "./components/Input";
 import Nav from "./components/Nav";
 import NeuProgress from "./components/Progress";
 import NeuSlider from "./components/Slider";
@@ -55,6 +56,10 @@ function App() {
               <NeuProgress max={100} value={50} />
               <NeuProgress max={100} value={75} />
             </CardContent>
+            <CardFooter className="space-y-2">
+              <Input />
+              <Input />
+            </CardFooter>
           </Card>
         </div>
       </div>
