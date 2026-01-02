@@ -13,6 +13,7 @@ import Nav from "./components/Nav";
 import NeuProgress from "./components/Progress";
 import NeuSlider from "./components/Slider";
 import NeuSwitch from "./components/Switch";
+import { TabsList, TabsPanel, TabsRoot, TabsTab } from "./components/Tabs";
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
               <CardDescription>Simple vertical/horizontal bars</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <NeuProgress max={100} value={25} />
+              <NeuProgress variant={"secondary"} max={100} value={25} />
               <NeuProgress max={100} value={50} />
               <NeuProgress max={100} value={75} />
             </CardContent>
@@ -60,6 +61,25 @@ function App() {
               <Input />
               <Input />
             </CardFooter>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <TabsRoot>
+                <TabsList className="space-x-4">
+                  <TabsTab value="overview">Overview</TabsTab>
+                  <TabsTab value="user">User Info</TabsTab>
+                </TabsList>
+                <TabsPanel value={"overview"}>
+                  <h2>This is overview</h2>
+                  <p>this is more info about the overview</p>
+                </TabsPanel>
+                <TabsPanel value={"user"}>
+                  <h2>This is user</h2>
+                  <p>this is more info about the user</p>
+                </TabsPanel>
+              </TabsRoot>
+            </CardHeader>
           </Card>
         </div>
       </div>
