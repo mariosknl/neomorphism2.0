@@ -9,6 +9,7 @@ import {
 } from "./components/Card";
 import NeuCheckbox from "./components/Checkbox";
 import Nav from "./components/Nav";
+import NeuSlider from "./components/Slider";
 import NeuSwitch from "./components/Switch";
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
             </CardContent>
             <CardFooter>
               {/* <NeuSwitch /> */}
-              <NeuCheckbox />
+              {/* <NeuCheckbox /> */}
+              <NeuSlider variant={"default"} />
             </CardFooter>
           </Card>
         </div>
