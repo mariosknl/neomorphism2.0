@@ -1,4 +1,8 @@
-import { mergeProps, Progress, useRender } from "@base-ui-components/react";
+import {
+  mergeProps,
+  Progress,
+  type useRender,
+} from "@base-ui-components/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const progressVariants = cva(

@@ -1,4 +1,4 @@
-import { Pause, Play, SkipBack, SkipForward } from "lucide-react";
+import { Minus, Pause, Play, Plus, SkipBack, SkipForward } from "lucide-react";
 import Button from "./components/Button";
 import {
   Card,
@@ -47,7 +47,7 @@ function App() {
       </section>
 
       <section className="flex flex-col md:flex-row items-start max-w-7xl mx-auto gap-8 my-12">
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6 w-full">
           <Card>
             <CardHeader>
               <CardTitle>Music Player</CardTitle>
@@ -206,6 +206,43 @@ function App() {
                   />
                 </LineChart>
               </ResponsiveContainer>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Your move goal</CardTitle>
+              <CardDescription>
+                Track your weekly move goals here
+              </CardDescription>
+              <div className="flex gap-6 items-center justify-center mt-4">
+                <Button
+                  size={"icon"}
+                  shape={"circle"}
+                  aria-label="Decrease daily calorie goal"
+                >
+                  <Minus />
+                </Button>
+                <div className="text-center">
+                  <CardTitle className="text-2xl">350</CardTitle>
+                  <CardDescription>CALORIES/DAY</CardDescription>
+                </div>
+                <Button
+                  size={"icon"}
+                  shape={"circle"}
+                  aria-label="Icrease daily calorie goal"
+                >
+                  <Plus />
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="flex items-end justify-center gap-4 h-32">
+              {[85, 55, 24, 89, 100, 28, 44, 11, 20, 33, 76].map((value) => (
+                <NeuProgress
+                  key={value}
+                  value={value}
+                  orientation={"vertical"}
+                />
+              ))}
             </CardContent>
           </Card>
         </div>
