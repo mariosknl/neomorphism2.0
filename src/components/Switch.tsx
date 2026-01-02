@@ -1,9 +1,9 @@
-import { mergeProps, type useRender } from "@base-ui/react";
-import { Switch } from "@base-ui/react/switch";
+import { mergeProps, type useRender } from "@base-ui-components/react";
+import { Switch } from "@base-ui-components/react/switch";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const switchVariants = cva(
-  "cursor-pointer h-5.5 w-12 rounded-full focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-foreground focus-visible:ring-2 bg-background shadow-inset data-[checked]:bg-primary border-1 border-highlight data-[checked]:border-primary"
+  "cursor-pointer h-5.5 w-12 rounded-full focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-foreground focus-visible:ring-2 bg-background shadow-inset data-[checked]:bg-primary border-1 border-highlight data-[checked]:border-primary disabled:opacity-50"
 );
 const thumbVariants = cva(
   "h-5 w-5 bg-white relative rounded-full block ease-out transition-all duration-350 border-1 border-highlight after:w-1.5 after:h-1.5 after:absolute after:top-1/2 after:left-1/2 after:-translate-1/2 after:bg-muted after:rounded-full shadow-inset translate-x-0 data-[checked]:translate-x-6.5 data-[checked]:after:bg-primary"
