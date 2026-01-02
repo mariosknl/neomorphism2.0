@@ -1,7 +1,7 @@
-import { mergeProps, useRender } from "@base-ui-components/react";
+import { mergeProps, useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
-const cardVariants = cva("rounded-2xl border-3 border-border", {
+const cardVariants = cva("rounded-2xl border-2 border-border", {
   variants: {
     variant: {
       raised: "shadow-raised",
@@ -73,7 +73,7 @@ export function CardTitle(props: CardTitleProps) {
   return element;
 }
 
-// Card TitleDescription
+// Card Description
 const cardDescriptionVariants = cva("text-sm text-muted-foreground");
 
 interface CardDescriptionProps

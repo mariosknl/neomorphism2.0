@@ -16,7 +16,7 @@
     -2px -2px 6px var(--color-highlight), inset 0px 0px 0px var(--color-shadow),
     inset 0px 0px 0px var(--color-highlight),
     inset 1px 1px 2px var(--color-edge);
-  --shadow-inset: inset 1px 1x 2px var(--color-shadow),
+  --shadow-inset: inset 1px 1px 2px var(--color-shadow),
     inset -1px -1px 6px var(--color-highlight),
     inset 2px 2px 6px var(--color-shadow),
     inset -2px -2px 6px var(--color-highlight);

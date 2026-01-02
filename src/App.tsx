@@ -7,7 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/Card";
+import NeuCheckbox from "./components/Checkbox";
 import Nav from "./components/Nav";
+import NeuSwitch from "./components/Switch";
 
 function App() {
   return (
@@ -36,7 +38,8 @@ function App() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button variant="primary">Purchase now</Button>
+              {/* <NeuSwitch /> */}
+              <NeuCheckbox />
             </CardFooter>
           </Card>
         </div>
