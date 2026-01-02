@@ -1,4 +1,4 @@
-import { mergeProps, useRender } from "@base-ui/react";
+import { mergeProps, useRender } from "@base-ui-components/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const cardVariants = cva("rounded-2xl border-2 border-border", {

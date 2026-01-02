@@ -1,4 +1,4 @@
-import { mergeProps, Progress, useRender } from "@base-ui/react";
+import { mergeProps, Progress, useRender } from "@base-ui-components/react";
 import { cva, type VariantProps } from "class-variance-authority";
 
 const progressVariants = cva(
@@ -57,7 +57,7 @@ export default function NeuProgress(props: ProgressProps) {
           style={
             props.orientation === "vertical"
               ? {
-                  height: `${props.value}%`,
+                  height: `${otherProps.value}%`,
                   position: "absolute",
                   width: "100%",
                   bottom: 0,
