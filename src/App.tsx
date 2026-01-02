@@ -16,10 +16,20 @@ import NeuSlider from "./components/Slider";
 import NeuSwitch from "./components/Switch";
 import { TabsList, TabsPanel, TabsRoot, TabsTab } from "./components/Tabs";
 import { useState } from "react";
+import { Line, LineChart, ResponsiveContainer } from "recharts";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedPlan, setsSlectedPlan] = useState("starter");
+
+  const revenueData = [
+    { name: "Jan", value: 3000 },
+    { name: "Feb", value: 9500 },
+    { name: "Mar", value: 8000 },
+    { name: "Apr", value: 8500 },
+    { name: "May", value: 12200 },
+    { name: "Jun", value: 15031 },
+  ];
 
   return (
     <main>
@@ -169,13 +179,36 @@ function App() {
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-4">
+            <CardFooter className="flex gap-4 w-full">
               <Button variant={"destructive"}>Cancel</Button>
               <Button variant={"primary"}>Upgrade Plan</Button>
             </CardFooter>
           </Card>
         </div>
-        <div className="flex-1 space-y-6"></div>
+        <div className="flex-1 space-y-6">
+          <Card>
+            <CardHeader>
+              <div className="flex items-center justify-between">
+                <CardTitle>Total Revenue</CardTitle>
+              </div>
+              <CardTitle className="text-3xl font-bold">%15,231.89</CardTitle>
+              <p className="text-sm">201% from last month</p>
+            </CardHeader>
+            <CardContent className="h-48">
+              <ResponsiveContainer width={"100%"} height={"100%"}>
+                <LineChart data={revenueData}>
+                  <Line
+                    type={"monotone"}
+                    dataKey={"value"}
+                    stroke="var(--color-primary)"
+                    strokeWidth={3}
+                    dot={{ fill: "var(--color-primary)" }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </CardContent>
+          </Card>
+        </div>
       </section>
     </main>
   );
